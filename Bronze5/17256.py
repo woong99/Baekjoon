@@ -5,3 +5,6 @@
 정웅교
 문제: https://www.acmicpc.net/problem/17256
 """
+a, b, c = map(int, input().split())
+d, e, f = map(int, input().split())
+print(d - c, e // b, f - a)
