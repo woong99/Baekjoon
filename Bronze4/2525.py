@@ -10,4 +10,10 @@ a, b = map(int, input().split())
 n = int(input())
 if b + n >= 60:
     a += (b + n) // 60
-    b = b + n - 60
+    if a >= 24:
+        a = a - 24
+    b = (b + n) % 60
+else:
+    b = b + n
+
+print(a, b)
