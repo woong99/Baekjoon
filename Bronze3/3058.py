@@ -17,3 +17,4 @@ for _ in range(t):
             ls.append(i)
     ls.sort()
     print(sum, ls[0])
+    print(sum, ls[0])
