@@ -6,9 +6,9 @@
 문제: https://www.acmicpc.net/problem/1009
 """
 
-T = int(input())
+n = int(input())
 
-for _ in range(T):
+for _ in range(n):
     a, b = map(int, input().split())
     a = a % 10
 
