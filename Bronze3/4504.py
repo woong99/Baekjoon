@@ -5,12 +5,12 @@
 정웅교
 문제: https://www.acmicpc.net/problem/4504
 """
-n = int(input())
+k = int(input())
 while 1:
     i = int(input())
     if i == 0:
         break
-    if i % n == 0:
-        print(f"{i} is a multiple of {n}.")
+    if i % k == 0:
+        print(f"{i} is a multiple of {k}.")
     else:
-        print(f"{i} is NOT a multiple of {n}.")
+        print(f"{i} is NOT a multiple of {k}.")
