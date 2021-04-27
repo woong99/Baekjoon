@@ -5,6 +5,6 @@
 정웅교
 문제: https://www.acmicpc.net/problem/2742
 """
-q = int(input())
-for i in range(q, 0, -1):
+v = int(input())
+for i in range(v, 0, -1):
     print(i)
