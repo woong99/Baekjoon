@@ -6,7 +6,7 @@
 문제: https://www.acmicpc.net/problem/4880
 """
 
-while 1:
+while True:
     a, b, c = map(int, input().split())
     if a == b == c == 0:
         break
