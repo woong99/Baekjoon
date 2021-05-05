@@ -6,9 +6,9 @@
 문제: https://www.acmicpc.net/problem/10833
 """
 
-n = int(input())
+h = int(input())
 rst = 0
-for _ in range(n):
+for _ in range(h):
     a, b = map(int, input().split())
     rst += b - ((b // a) * a)
 print(rst)
