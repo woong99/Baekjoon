@@ -5,8 +5,8 @@
 정웅교
 문제: https://www.acmicpc.net/problem/10872
 """
-y = int(input())
+a = int(input())
 res = 1;
-for i in range(1, y + 1):
+for i in range(1, a + 1):
     res *= i
 print(res)
