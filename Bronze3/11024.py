@@ -6,7 +6,7 @@
 문제: https://www.acmicpc.net/problem/11024
 """
 
-n = int(input())
-for _ in range(n):
+a = int(input())
+for _ in range(a):
     ls = list(map(int, input().split()))
     print(sum(ls))
