@@ -6,7 +6,7 @@
 문제: https://www.acmicpc.net/problem/1152
 """
 
-n = str(input())
-ls = list(n.split())
+a = str(input())
+ls = list(a.split())
 
 print(len(ls))
