@@ -5,9 +5,9 @@
 정웅교
 문제: https://www.acmicpc.net/problem/1357
 """
-a, b = map(str, input().split())
+a, c = map(str, input().split())
 a = a[::-1]
-b = b[::-1]
+b = c[::-1]
 sum = str(int(a) + int(b))
 sum = sum[::-1]
 print(int(sum))
