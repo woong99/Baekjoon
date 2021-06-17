@@ -7,5 +7,5 @@
 """
 
 a, b = map(str, input().split())
-d = int(a, 2) + int(b, 2)
-print(bin(d)[2:])
+c = int(a, 2) + int(b, 2)
+print(bin(c)[2:])
