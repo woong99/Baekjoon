@@ -9,10 +9,10 @@
 n = int(input())
 ls = list(map(int, input().split()))
 ls1 = []
-cnt = 0
+cnt1 = 0
 for i in ls:
     if i in ls1:
-        cnt += 1
+        cnt1 += 1
     else:
         ls1.append(i)
-print(cnt)
+print(cnt1)
