@@ -8,8 +8,8 @@
 a, b = map(int, input().split())
 s1 = set(list(map(int, input().split())))
 s2 = set(list(map(int, input().split())))
-s4 = list(s1 - s2)
-s4.sort()
-print(len(s4))
-for i in s4:
+s3 = list(s1 - s2)
+s3.sort()
+print(len(s3))
+for i in s3:
     print(i, end=' ')
