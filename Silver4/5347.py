@@ -9,5 +9,5 @@ import math
 from sys import stdin
 
 for _ in range(int(stdin.readline())):
-    a, d = map(int, input().split())
-    print(math.lcm(a, d))
+    a, e = map(int, input().split())
+    print(math.lcm(a, e))
