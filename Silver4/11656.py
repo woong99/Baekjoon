@@ -10,5 +10,5 @@ ls = []
 for i in range(len(s)):
     ls.append(s[i:])
 ls.sort()
-for i in ls:
-    print(i)
+for k in ls:
+    print(k)
