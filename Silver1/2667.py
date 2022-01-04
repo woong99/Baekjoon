@@ -7,31 +7,35 @@
 """
 
 
-def dfs(a, b):
-    if a < 0 or b < 0 or a >= n or b >= n or graph[a][b] == 0:
+def dfs(a, b, c):
+    if a < 0 or b < 0 or a >= n or b >= n:
         return
-    visited[a][b] = 1
-    dfs(a + 1, b)
-    dfs(a, b + 1)
-    dfs(a - 1, b)
-    dfs(a, b - 1)
+    if graph[a][b] == '1':
+        graph[a][b] = c
+        dfs(a + 1, b, c)
+        dfs(a, b + 1, c)
+        dfs(a - 1, b, c)
+        dfs(a, b - 1, c)
 
 
 n = int(input())
-# graph = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
 graph = []
-visited = [[0 for _ in range(n)] for _ in range(n)]
 for _ in range(n):
-    s = list(input())
-    ls = []
-    for i in s:
-        ls.append(int(i))
-    graph.append(ls)
+    graph.append(list(input()))
+    cnt = 2
+for i in range(n):
+    for j in range(n):
+        if graph[i][j] == '1':
+            dfs(i, j, cnt)
+            cnt += 1
 
-for i in graph:
-    print(i)
-print()
-
-dfs(0, 1)
-for i in visited:
+print(cnt - 2)
+ls = []
+for i in range(2, cnt):
+    t = 0
+    for j in graph:
+        t += j.count(i)
+    ls.append(t)
+ls.sort()
+for i in ls:
     print(i)
