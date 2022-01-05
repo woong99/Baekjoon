@@ -5,50 +5,35 @@
 정웅교
 문제: https://www.acmicpc.net/problem/9663
 """
-import math
 
 
 def queens(i):
     global cnt
-    # if i == n:
-    #     cnt += 1
-    #     for j in range(n + 1):
-    #         col[j] = -1
-    #     return
-    # else:
-    #     for j in range(1, n+1):
-    #         col[i] = j
-    #         print(f"q({i}) : {col}")
-    #         print(f"queens({i + 1})")
-    #         if promising(i):
-    #             queens(i + 1)
-
     if promising(i):
-        # print(f"promising({i})")
-        if i == n:
+        # print(col, i)
+        if i == n - 1:
             cnt += 1
-            print(cnt)
-            for i in range(n + 1):
-                col[i] = -1;
         else:
-            for j in range(1, n+1):
+            for j in range(n):
                 col[i] = j
-                print(f"q({i}) : {col}")
-                print(f"queens({i + 1})")
                 queens(i + 1)
+                col[i] = -1
 
 
 def promising(i):
-    if i == 1:
+    print(col, i)
+    if i == 0:
         return True
-    for k in range(1, i):
+    for k in range(0, i):
+        print(f"col[{i}]({col[i]}) == col[{k}]({col[k]})")
         if col[i] == col[k] or abs(col[i] - col[k] == abs(i - k)):
+            print(False)
             return False
     return True
 
 
 n = int(input())
-col = [-1 for _ in range(n + 1)]
+col = [-1 for _ in range(n)]
 cnt = 0
-queens(1)
+queens(0)
 print(f"cnt={cnt}")
