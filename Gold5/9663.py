@@ -9,25 +9,28 @@
 
 def queens(i):
     global cnt
-    if promising(i):
-        # print(col, i)
-        if i == n - 1:
-            cnt += 1
-        else:
-            for j in range(n):
-                col[i] = j
-                queens(i + 1)
-                col[i] = -1
+    print(col, i)
+    # if promising(i):
+
+    if i == n - 1:
+        # print(col)
+        cnt += 1
+    else:
+        for j in range(n):
+            col[i] = j
+            print(f"q({i + 1})")
+            queens(i + 1)
+            col[i] = -1
 
 
 def promising(i):
-    print(col, i)
+    # print(col, i)
     if i == 0:
         return True
     for k in range(0, i):
-        print(f"col[{i}]({col[i]}) == col[{k}]({col[k]})")
+        # print(f"col[{i}]({col[i]}) == col[{k}]({col[k]})")
         if col[i] == col[k] or abs(col[i] - col[k] == abs(i - k)):
-            print(False)
+            # print(False)
             return False
     return True
 
