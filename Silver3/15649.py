@@ -6,21 +6,17 @@
 문제: https://www.acmicpc.net/problem/15649
 """
 
-n, m = map(int, input().split())
-    
-s = []
 
-
-def f():
+def dfs(v):
     if len(s) == m:
-        print(' '.join(map(str, s)))
-        return
+        print(*s)
     for i in range(1, n + 1):
-        if i in s:
-            continue
         s.append(i)
-        f()
+        dfs(i)
         s.pop()
 
 
-f()
+n, m = map(int, input().split())
+visited = [0 for _ in range(n)]
+s = []
+dfs(1)
